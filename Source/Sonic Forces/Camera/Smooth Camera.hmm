@@ -38,10 +38,10 @@ Patch "Smooth Camera" in "Camera" by "Ahremic & Hyper" does "Replaces linear cam
     WriteAsmHook
     (
         $@"
-            push eax
+            push rax
             xor  eax, eax
             mov  [rdi + 0xC0], eax
-            pop  eax
+            pop  rax
         ",
 
         0x142961466,
@@ -58,9 +58,9 @@ Patch "Smooth Camera" in "Camera" by "Ahremic & Hyper" does "Replaces linear cam
             mov  [rcx + 0x24], eax
 
             ; Custom data
-            push eax
+            push rax
             mov  [rdi + 0x28], eax
-            pop  eax
+            pop  rax
             ret
         ",
 
